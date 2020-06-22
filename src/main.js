@@ -10,18 +10,6 @@ import router from './router'
 
 Vue.use(VueMaterial)
 
-const store = new Vue({
-  strict: true,
-  state: {
-    initialGainGoal: 'Hello Vuex',
-  },
-  mutations: {
-      updateMessage (state, initialGainGoal) {
-          state.initialGainGoal = initialGainGoal
-      }
-  }
-})
-
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
@@ -29,15 +17,5 @@ new Vue({
   el: '#app',
   router,
   components: { App },
-  template: '<App/>',
-  computed: {
-    initialGainGoal:{
-      get () {
-        return this.$store.state.initialGainGoal
-      },
-      set(value) {
-        this.$store.commit('updateMessage, value')
-      }
-    }
-  }
+  template: '<App/>'
 })
