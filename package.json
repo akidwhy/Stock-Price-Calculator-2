@@ -1,22 +1,32 @@
 {
   "name": "round2",
   "version": "1.0.0",
-  "description": "A Vue.js project",
-  "author": "Abdullah Kidwai <akidwa2@uic.edu>",
   "private": true,
+  "description": "A Vue.js project",
+  "author": {
+    "name": "Abdullah Kidwai",
+    "email": "akidwa2@uic.edu"
+  },
   "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
-    "start": "npm run dev",
-    "build": "node build/build.js"
+    "start": "npm run dev"
   },
   "dependencies": {
-    "vue": "^2.5.2",
+    "core-js": "^3.6.5",
+    "vue": "^2.6.11",
     "vue-material": "^1.0.0-beta-14",
     "vue-router": "^3.0.1"
   },
   "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.4.0",
+    "@vue/cli-plugin-eslint": "~4.4.0",
+    "@vue/cli-service": "~4.4.0",
     "autoprefixer": "^7.1.2",
     "babel-core": "^6.22.1",
+    "babel-eslint": "^10.1.0",
     "babel-helper-vue-jsx-merge-props": "^2.0.3",
     "babel-loader": "^7.1.1",
     "babel-plugin-syntax-jsx": "^6.18.0",
@@ -27,6 +37,8 @@
     "chalk": "^2.0.1",
     "copy-webpack-plugin": "^4.0.1",
     "css-loader": "^0.28.0",
+    "eslint": "^6.7.2",
+    "eslint-plugin-vue": "^6.2.2",
     "extract-text-webpack-plugin": "^3.0.0",
     "file-loader": "^1.1.4",
     "friendly-errors-webpack-plugin": "^1.6.1",
@@ -47,19 +59,36 @@
     "url-loader": "^0.5.8",
     "vue-loader": "^13.3.0",
     "vue-style-loader": "^3.0.1",
-    "vue-template-compiler": "^2.5.2",
+    "vue-template-compiler": "^2.6.11",
     "webpack": "^3.6.0",
     "webpack-bundle-analyzer": "^2.9.0",
     "webpack-dev-server": "^2.9.1",
     "webpack-merge": "^4.1.0"
   },
-  "engines": {
-    "node": ">= 6.0.0",
-    "npm": ">= 3.0.0"
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "babel-eslint"
+    },
+    "rules": {}
   },
   "browserslist": [
     "> 1%",
     "last 2 versions",
-    "not ie <= 8"
-  ]
+    "not ie <= 8",
+    "not dead"
+  ],
+  "_id": "round2@1.0.0",
+  "engines": {
+    "node": ">= 6.0.0",
+    "npm": ">= 3.0.0"
+  },
+  "readme": "ERROR: No README data found!"
 }
